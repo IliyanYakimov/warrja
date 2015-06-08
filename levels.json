@@ -1,0 +1,7 @@
+{
+    "1": {
+        "enemies": 10,
+        "bonuses": 3,
+        "bonus_types": ["rheart", "bheart", "bonus_wep"]
+    }
+}

@@ -6,7 +6,7 @@ class Bonus(pygame.sprite.Sprite):
     bonuses = ["", "rheart.png", "bheart.png", "bonus_wep"]
 
     def __init__(self, x, y, image_name, bonus_type):
-        """bonus_type is an integer. Meaning: index for bonuses list"""
+        """bonus_type is an integer. Meaning: index for bonuses"""
         self.x = x
         self.y = y
         self.image = pygame.image.load(os.path.join("images", image_name))
