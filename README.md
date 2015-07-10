@@ -9,7 +9,7 @@ During the game, the enemies become better and stronger. You too become can bett
 killing enemies(your weapon will improve).
 Your final intent ? - just kill all enemies.
 
-------------------------------------------------------------------------------------------
+=========================================================================================
 
 I. if you are a developer -> you know what to do. 
 
