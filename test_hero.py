@@ -12,7 +12,7 @@ class TestHero(unittest.TestCase):
 
     def test_position(self):
         self.assertEqual(self.hero.x, WINDOWWIDTH / 2)
-        self.assertEqual(self.hero.y, WINDOWHEIGHT - 5)
+        self.assertEqual(self.hero.y, WINDOWHEIGHT)
 
     def test_hero_has_image(self):
         self.assertIsNotNone(self.hero.image,
@@ -23,7 +23,7 @@ class TestHero(unittest.TestCase):
 
     def test_is_alive(self):
         self.assertTrue(self.hero.is_alive)
-        self.assertEqual(self.hero.health, 100)
+        self.assertEqual(self.hero.health, HERO_HEALTH)
 
     def test_hero_weapon(self):
         self.assertIsInstance(self.hero.weapon, Weapon)
@@ -42,7 +42,7 @@ class TestHero(unittest.TestCase):
     def test_weapon(self):
         self.assertFalse(self.hero.weapon.is_active)
         self.hero.shoot()
-        self.assertTrue(self.hero.weapon.is_active)
+        self.assertFalse(self.hero.weapon.is_active)
 
 
 if __name__ == '__main__':

@@ -8,7 +8,7 @@ from settings import *
 class TestEnemy(unittest.TestCase):
 
     def setUp(self):
-        self.enemy = Enemy("enemy1.png", 1, 30)
+        self.enemy = Enemy("enemy1.png", 1)
 
     def test_position(self):
         self.assertEqual(self.enemy.x, WINDOWWIDTH/2)
@@ -23,7 +23,7 @@ class TestEnemy(unittest.TestCase):
 
     def test_is_alive(self):
         self.assertTrue(self.enemy.is_alive)
-        self.assertEqual(self.enemy.health, 30)
+        self.assertEqual(self.enemy.health, 5)
 
     def test_move_attribute(self):
         self.assertFalse(self.enemy.move_left)
