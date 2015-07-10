@@ -14,5 +14,6 @@ I. if you are a developer -> you know what to do.
 ------------------------------------------------
 
 II. if you aren't a developer:
-1. Download and install python from: https://www.python.org/
-2. 
+1. Download and install python from: https://www.python.org/  
+2. Click `Download ZIP` (on the right side of the screen)
+![Alt text](http://i.imgur.com/6NLMxpV.png )
