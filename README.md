@@ -26,7 +26,8 @@ Gameplay:
 To move left: use left arrow  
 To move right: use right arrow  
 Shooting: use space  
-  
+Quit: use escape  
+
 =========================================================================================
 
 Some pictures of the game:  
