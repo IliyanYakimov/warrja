@@ -1,7 +1,31 @@
 {
     "1": {
-        "enemies": 10,
-        "bonuses": 3,
+        "enemies": 15,
+        "bonuses": 5,
         "bonus_types": ["rheart", "bheart", "bonus_wep"]
+    },
+
+    "2": {
+        "enemies": 15,
+        "bonuses": 5,
+        "bonus_types": ["rheart", "bheart", "bonus_wep"]
+    },
+
+    "3": {
+        "enemies": 12,
+        "bonuses": 4,
+        "bonus_types": ["rheart", "bheart", "bonus_wep"]
+    },
+
+    "4": {
+        "enemies": 10,
+        "bonuses": 4,
+        "bonus_types": ["rheart", "bheart", "bonus_wep"]
+    },
+
+    "5": {
+        "enemies": 8,
+        "bonuses": 3,
+        "bonus_types": ["rheart", "bheart", "bonus_wep", "winner.png"]
     }
 }

@@ -5,16 +5,18 @@ from weapon import Weapon
 
 class Hero(pygame.sprite.Sprite):
 
-    def __init__(self, x=WINDOWWIDTH/2, y=WINDOWHEIGHT-5):
+    def __init__(self, x=WINDOWWIDTH/2, y=WINDOWHEIGHT):
         super().__init__()
         self.x = x
         self.y = y
         self.image = pygame.image.load(os.path.join("images", "hero1.png"))
         self.rect_start = self.image.get_rect()
         self.rect = self.rect_start.move(
-            self.x-self.rect_start.centerx, self.y)
+            self.x-self.rect_start.centerx, self.y - self.rect_start.height)
         self.is_alive = True
-        self.health = 100
+        self.health = HERO_HEALTH
+        self.health_image = pygame.image.load(
+                os.path.join("images", "health.png"))
         self.lives = STARTING_LIVES
         self.weapon = Weapon("weapon1.png", x, y)
         self.move_left = False
@@ -30,5 +32,10 @@ class Hero(pygame.sprite.Sprite):
             self.rect = self.rect.move(-PLAYER_SPEED, 0)
 
     def shoot(self):
-        self.weapon.is_active = True
+        if not self.weapon.is_active:
+            self.weapon.x = self.x
+            self.weapon.y = self.y
+            self.weapon.rect.centerx = self.rect.centerx
+            self.weapon.rect.centery = self.rect.centery 
+
         self.weapon.move_weapon_hero()

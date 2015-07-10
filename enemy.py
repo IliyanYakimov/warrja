@@ -5,22 +5,26 @@ import random
 
 
 class Enemy(pygame.sprite.Sprite):
-    weapons = ["", 'enemywep1.png']
-    healts = [0, 30, 50, 70]
+    weapons = ["", 'enemywep1.png', 'enemywep2.png',
+               'enemywep3.png', 'enemywep4.png', 'enemywep5.png']
+    healths = [0, 5, 7, 8, 10, 12]
 
-    def __init__(self, image_name, level, health, x=WINDOWWIDTH/2, y=5):
+    def __init__(self, image_name, level, x=WINDOWWIDTH/2, y=5):
         """level is an integer, for weapon's type"""
+        super().__init__()
         self.x = x
         self.y = y
         self.image = pygame.image.load(os.path.join("images", image_name))
         self.rect_start = self.image.get_rect()
         self.rect = self.rect_start.move(self.x - self.rect_start.right, 0)
         self.is_alive = True
-        self.health = health
+        self.health = Enemy.healths[level]
+        self.health_image = pygame.image.load(
+                os.path.join("images", "health.png"))
         self.move_left = False
         self.move_right = False
         self.level = level
-        self.weapon = Weapon(Enemy.weapons[level], self.x, self.y)
+        self.weapon = Weapon(Enemy.weapons[level], self.x, self.y, power=level)
 
     def move_and_shoot(self):
         if self.is_alive:
