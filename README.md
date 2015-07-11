@@ -15,8 +15,9 @@ I. if you are a developer -> you know what to do.
 
 II. if you aren't a developer:  
 1. Download and install python from: https://www.python.org/ .Recommended version 3.x (version 3.4 or newer)  
-2. What is your OS:  
-    2.1 Windows:  
+2. What is your OS:
+
+     2.1 Windows
 `Windows 7`
 Select Computer from the Start menu
 Choose System Properties from the context menu
