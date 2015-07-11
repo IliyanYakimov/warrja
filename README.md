@@ -45,10 +45,12 @@ Open terminal and write `pip install pygame`. If it does not, visit `https://www
 
 For general help, visit: `http://webprojects.eecs.qmul.ac.uk/fa303/pgs/install.html`  
 
-3. Click `Download ZIP` (on the right side of the screen)  
+=========================================================================================
+
+3 . Click `Download ZIP` (on the right side of the screen)  
 ![Alt text](http://i.imgur.com/6NLMxpV.png )  
-4. Unzip  
-5. Open folder's game and double click on the `warrja`  
+4 . Unzip  
+5 . Open folder's game and double click on the `warrja`  
 
 =========================================================================================
 
