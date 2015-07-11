@@ -37,12 +37,15 @@ Start -> Control Panel -> System -> Advanced
 Click on Environment Variables, under System Variables, find PATH, and click on it.
 In the Edit windows, modify PATH by adding the location of the class to the value for PATH. If you do not have the item PATH, you may select to add a new variable and add PATH as the name and the location of the class as the value.
 Close the window.
+Then visit: `https://www.webucator.com/blog/2015/03/installing-the-windows-64-bit-version-of-pygame/`  
 
+    2.2 Linux and Mac: 
+Open terminal and write `pip install pygame`. If it does not visit `https://www.webucator.com/blog/2015/03/installing-the-windows-64-bit-version-of-pygame/`for download and install `wheel` and `pygame`.
 
-2. Click `Download ZIP` (on the right side of the screen)  
+3. Click `Download ZIP` (on the right side of the screen)  
 ![Alt text](http://i.imgur.com/6NLMxpV.png )  
-3. Unzip  
-4. Open folder's game and double click on the `warrja`  
+4. Unzip  
+5. Open folder's game and double click on the `warrja`  
 
 =========================================================================================
 
