@@ -47,10 +47,10 @@ def start_level(level):
         if game.is_completed or game.game_over or game.level_completed or \
                 game.restart:
             pygame.time.delay(3000)
-        
+
         if not game.hero.is_alive:
             pygame.time.delay(2500)
-        
+
         if game.is_completed:
             main_menu.is_active = True
             start()
@@ -83,13 +83,13 @@ def show_start_screen():
 
         draw_press_key_msg()
 
-        if checkForKeyPress():
-            pygame.event.get() # clear event queue
+        if check_for_key_press():
+            pygame.event.get()  # clear event queue
             return
         pygame.display.update()
         fps_clock.tick(FPS)
-        degrees1 += 3 # rotate by 3 degrees each frame
-        degrees2 += 7 # rotate by 7 degrees each frame
+        degrees1 += 3  # rotate by 3 degrees each frame
+        degrees2 += 7  # rotate by 7 degrees each frame
 
 
 def draw_press_key_msg():
@@ -99,7 +99,7 @@ def draw_press_key_msg():
     displaysurf.blit(press_key_surf, press_key_rect)
 
 
-def checkForKeyPress():
+def check_for_key_press():
     if len(pygame.event.get(QUIT)) > 0:
         quit()
 
@@ -138,8 +138,8 @@ def menu_levels():
         fps_clock.tick(FPS)
 
 
-Game.available_levels = [(str(level), start_level) for level in \
-        range(1, game.max_level_available + 1)]
+Game.available_levels = [(str(level), start_level) for level in
+                         range(1, game.max_level_available + 1)]
 Game.available_levels.append(("BACK", back))
 main_menu = Menu(OrderedDict([("NEW GAME", menu_levels),
                              ("QUIT", quit)]), displaysurf)
@@ -159,11 +159,11 @@ def handle_menu_event(menu):
                 else:
                     back()
 
-            if event.key == K_DOWN and menu.current_option == None:
+            if event.key == K_DOWN and menu.current_option is None:
                 menu.current_option = 0
                 pygame.mouse.set_visible(False)
 
-            elif event.key == K_UP and menu.current_option == None:
+            elif event.key == K_UP and menu.current_option is None:
                 menu.current_option = len(menu.options) - 1
                 pygame.mouse.set_visible(False)
 
@@ -190,7 +190,6 @@ def handle_menu_event(menu):
                 elif menu == level_menu:
                     level = menu.ready_options[menu.current_option]
                     start_level(int(level.text))
-
 
         elif event.type == MOUSEBUTTONUP:
             for option in menu.ready_options:
@@ -278,7 +277,7 @@ def draw_hero_health():
     health_image = game.hero.health_image
     for h in range(1, game.hero.health + 1):
         displaysurf.blit(health_image, (WINDOWWIDTH - h*10, WINDOWHEIGHT - 15))
-    displaysurf.blit(you_image,(WINDOWWIDTH - 50, WINDOWHEIGHT - 35))
+    displaysurf.blit(you_image, (WINDOWWIDTH - 50, WINDOWHEIGHT - 35))
 
 
 def draw_enemy_health():

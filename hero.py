@@ -36,6 +36,6 @@ class Hero(pygame.sprite.Sprite):
             self.weapon.x = self.x
             self.weapon.y = self.y
             self.weapon.rect.centerx = self.rect.centerx
-            self.weapon.rect.centery = self.rect.centery 
+            self.weapon.rect.centery = self.rect.centery
 
         self.weapon.move_weapon_hero()

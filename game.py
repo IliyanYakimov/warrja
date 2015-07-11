@@ -38,7 +38,6 @@ class Game:
         self.active_bonus = False
         self.level_completed = False
         self.final_bonus = False
-        print("tuka sme w load_level")
         self.hero.weapon = Weapon("weapon" + str(level) + ".png",
                                   self.hero.x, self.hero.y, level)
 
@@ -47,7 +46,7 @@ class Game:
             with open('max_level_available', 'w') as \
                     max_completed_level_file:
                 max_completed_level_file.write(str(self.max_level_available))
-        
+
         with open('levels.json', 'r') as levels_file:
             levels = json.load(levels_file)
             current_level = levels[str(level)]
@@ -67,14 +66,13 @@ class Game:
                     self.playing_enemies.remove(enemy)
                     if not self.active_bonus:
                         self.get_bonuses(enemy.x, enemy.y)
-        
+
         if not self.enemies and not self.playing_enemies and\
                 not self.final_bonus and not self.active_bonus:
             self.get_bonuses(WINDOWWIDTH / 2, 0)
 
         if self.active_bonus:
             self.current_bonus.get_bonus()
-
 
     def hero_collision(self):
         """check and action if enemy hit hero"""
@@ -107,7 +105,7 @@ class Game:
                 elif bonus.bonus_type == 3:
                     self.hero.weapon.image = \
                             pygame.image.load(
-                                    os.path.join("images", "weapon" + \
+                                    os.path.join("images", "weapon" +
                                                  str(self.level + 1) + ".png"))
                     self.hero.weapon.power = self.level + 1
                     self.final_bonus = True
@@ -120,10 +118,8 @@ class Game:
                 return True
             return False
 
-
     def restart_level(self):
         self.load_level(self.level)
-
 
     def get_bonuses(self, x, y):
         if not self.enemies and not self.playing_enemies and \
@@ -146,17 +142,17 @@ class Game:
             return True
         return False
 
-
     def loading_enemies(self):
         if self.level <= 3:
-            if len(self.playing_enemies) < 4 and self.enemies:
-                while len(self.playing_enemies) <= 4:
+            if len(self.playing_enemies) <= 4 and self.enemies:
+                while len(self.playing_enemies) <= 4 and \
+                        len(self.enemies) > 0:
                     self.playing_enemies.append(self.enemies.pop())
         else:
-            if len(self.playing_enemies) < 3 and self.enemies:
-                while len(self.playing_enemies) <= 3:
+            if len(self.playing_enemies) <= 3 and self.enemies:
+                while len(self.playing_enemies) <= 3 and \
+                        len(self.enemies) > 0:
                     self.playing_enemies.append(self.enemies.pop())
-
 
     def update(self):
         if self.level_completed and not self.is_completed:
@@ -170,7 +166,7 @@ class Game:
 
         if not self.hero.is_alive:
             self.restart_level()
-        
+
         self.loading_enemies()
         for enemy in self.playing_enemies:
             enemy.move_and_shoot()

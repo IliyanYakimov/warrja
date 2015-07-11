@@ -48,7 +48,6 @@ class TestGame(unittest.TestCase):
         self.assertFalse(enemy1.is_alive)
         self.assertIsNot(enemy1, self.game.playing_enemies[0])
 
-
     def test_hero_collision(self):
         enemy1 = Enemy("enemywep1.png", 1)
         enemy1.weapon.is_active = True
@@ -71,7 +70,6 @@ class TestGame(unittest.TestCase):
             self.game.hero_collision()
         self.assertFalse(self.game.hero.is_alive)
         self.assertTrue(self.game.game_over)
-
 
     def test_bonus_collision(self):
         bonus1 = Bonus(WINDOWWIDTH/2, 0, "rheart.png", 1)
