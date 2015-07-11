@@ -43,6 +43,8 @@ Then visit: `https://www.webucator.com/blog/2015/03/installing-the-windows-64-bi
     2.2 Linux and Mac: 
 Open terminal and write `pip install pygame`. If it does not, visit `https://www.webucator.com/blog/2015/03/installing-the-windows-64-bit-version-of-pygame/`for download and install `wheel` and `pygame`.
 
+=========================================================================================
+
 For general help, visit: `http://webprojects.eecs.qmul.ac.uk/fa303/pgs/install.html`  
 
 =========================================================================================
