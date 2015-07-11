@@ -14,7 +14,17 @@ Your final intent ? - just kill all enemies.
 I. if you are a developer -> you know what to do. 
 
 II. if you aren't a developer:  
-1. Download and install python from: https://www.python.org/  
+1. Download and install python from: https://www.python.org/ .Recommended version 3.x (version 3.4 or newer)  
+2. What is your OS:  
+  2.1 Windows:  
+`Windows 7`
+Select Computer from the Start menu
+Choose System Properties from the context menu
+Click Advanced system settings > Advanced tab
+Click on Environment Variables, under System Variables, find PATH, and click on it.
+In the Edit windows, modify PATH by adding the location of the class to the value for PATH. If you do not have the item PATH, you may select to add a new variable and add PATH as the name and the location of the class as the value.
+Reopen Command prompt window, and run your java code.
+
 2. Click `Download ZIP` (on the right side of the screen)  
 ![Alt text](http://i.imgur.com/6NLMxpV.png )  
 3. Unzip  
